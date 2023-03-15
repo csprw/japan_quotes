@@ -30,16 +30,32 @@ console.log("Vid6");
 // let modelsUrl = "https://raw.github.com/csprw/japan_quotes/tree/master/models"
 // let modelsUrl = "./models"
 
-Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/japan_quotes/'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/japan_quotes/'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/japan_quotes/'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/japan_quotes/')
+// Promise.all([
+//   faceapi.nets.tinyFaceDetector.loadFromUri('/japan_quotes/'),
+//   faceapi.nets.faceLandmark68Net.loadFromUri('/japan_quotes/'),
+//   faceapi.nets.faceRecognitionNet.loadFromUri('/japan_quotes/'),
+//   faceapi.nets.faceExpressionNet.loadFromUri('/japan_quotes/')
   // faceapi.nets.tinyFaceDetector.loadFromUri(modelsUrl + 'tiny_face_detector_model-weights_manifest.json'),
   // faceapi.nets.faceLandmark68Net.loadFromUri(modelsUrl + 'face_landmark_68_model-weights_manifest.json'),
   // faceapi.nets.faceRecognitionNet.loadFromUri(modelsUrl + 'face_recognition_model-weights_manifest.json'),
   // faceapi.nets.faceExpressionNet.loadFromUri(modelsUrl + 'ssd_mobilenetv1_model-weights_manifest.json')
-]).then(startVideo)
+// ]).then(startVideo)
+
+
+Promise.all([
+  faceapi.nets.tinyFaceDetector.loadFromUri(
+    "https://raw.githubusercontent.com/csprw/japan_quotes/master/models/"
+  ),
+  faceapi.nets.faceLandmark68Net.loadFromUri(
+    "https://raw.githubusercontent.com/csprw/japan_quotes/master/models/"
+  ),
+  faceapi.nets.faceRecognitionNet.loadFromUri(
+    "https://raw.githubusercontent.com/csprw/japan_quotes/master/models/"
+  ),
+  faceapi.nets.faceExpressionNet.loadFromUri(
+    "https://raw.githubusercontent.com/csprw/japan_quotes/master/models/"
+  ),
+]).then(startVideo);
 
 function startVideo() {
   navigator.getUserMedia(
