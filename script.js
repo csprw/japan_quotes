@@ -26,7 +26,8 @@ console.log("Vid4");
 // ]).then(startVideo)
 
 // let modelsUrl = "https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights/";
-let modelsUrl = "https://raw.github.com/csprw/japan_quotes/tree/master/models"
+// let modelsUrl = "https://raw.github.com/csprw/japan_quotes/tree/master/models"
+let modelsUrl = ""
 
 Promise.all([
   // faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
