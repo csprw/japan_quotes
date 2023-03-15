@@ -14,7 +14,7 @@ var quotes = [
   'We are going to swim at the park.'  
 ];
 
-import * as faceapi from 'face-api.esm.js';
+// import * as faceapi from 'face-api.esm.js';
 
 // The faceAPI
 const video = document.getElementById('video');
