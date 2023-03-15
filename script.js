@@ -57,6 +57,22 @@ Promise.all([
   ),
 ]).then(startVideo);
 
+// Promise.all([
+//   faceapi.nets.tinyFaceDetector.loadFromUri(
+//     "https://raw.githubusercontent.com/willtrinh/face-recognition/master/models/"
+//   ),
+//   faceapi.nets.faceRecognitionNet.loadFromUri(
+//     "https://raw.githubusercontent.com/willtrinh/face-recognition/master/models/"
+//   ),
+//   faceapi.nets.faceLandmark68Net.loadFromUri(
+//     "https://raw.githubusercontent.com/willtrinh/face-recognition/master/models/"
+//   ),
+//   faceapi.nets.faceExpressionNet.loadFromUri(
+//     "https://raw.githubusercontent.com/willtrinh/face-recognition/master/models/"
+//   ),
+// ]).then(startVideo);
+
+
 function startVideo() {
   navigator.getUserMedia(
     { video: {} },
