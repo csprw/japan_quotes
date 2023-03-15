@@ -17,7 +17,7 @@ var quotes = [
 
 // The faceAPI
 const video = document.getElementById('video');
-console.log("Vid5");
+console.log("Vid6");
 // Promise.all([
 //   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
 //   faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
