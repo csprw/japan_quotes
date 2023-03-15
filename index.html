@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+
+  <script>
+    function hideBoxes() {
+      console.log("hideBoxes");
+    }
+
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    canvas {
+      position: absolute;
+      /* border: 1px solid blue; */
+      /* height: 1em; */
+    }
+
+    #front {
+      /* border: 1px solid red; */
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 99;
+    }
+
+    #theForm {
+      background-color: rgba(240, 248, 255, 0.314);
+      opacity: 0.0;
+    }
+
+    #theForm:hover {
+      opacity: 1;
+    }
+
+
+    #textHolder {
+      position: absolute;
+      /* border: 2px solid red; */
+      width: 100%;
+      bottom: 0;
+    }
+
+    #theText {
+      font-size: 5em;
+      /* color: red; */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color:rgb(5, 5, 5);
+      /* position: absolute; */
+      /* bottom: 0; */
+      max-width:80vw;
+      margin-left: 10vw;
+      margin-bottom: 2vh;
+      /* border: 1px solid blue; */
+      /* word-wrap:break-word; */
+    }
+  </style>
+</head>
+<body>
+  <!-- <h2> hi! </h2>
+  <p>joiepiwe</p> -->
+  <!-- <video id="video" width="720" height="560" autoplay muted></video> -->
+
+
+  <div id="videoHolder">
+    <video id="video" width="1440" height="1120" autoplay muted></video>
+  </div>
+  
+  <div id="front">
+
+    <form id="theForm">
+      <input type="checkbox" id="boundingBox" name="boundingBox" value="boundingBox">
+      <label for="vehicle1"> boundingBox</label><br>
+      <input type="checkbox" id="landmarks" name="landmarks" value="landmarks" checked>
+      <label for="vehicle2"> landmarks</label><br>
+      <input type="checkbox" id="expression" name="expression" value="expression">
+      <label for="vehicle3"> expression</label><br><br>
+      <button id="hideButton" onclick="hideBoxes()">Hide</button>
+    </form>
+
+    <div id="textHolder">
+      <div id="theText">
+        <!-- This is a text that is very very very long so long you won't believe it. -->
+        <!-- It is better to travel well than to arrive. -->
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
