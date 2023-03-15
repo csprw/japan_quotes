@@ -30,10 +30,10 @@ console.log("Vid6");
 // let modelsUrl = "./models"
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/docs'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/docs'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/docs'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/docs')
+  faceapi.nets.tinyFaceDetector.loadFromUri('/japan_quotes/docs'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/japan_quotes/docs'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('/japan_quotes/docs'),
+  faceapi.nets.faceExpressionNet.loadFromUri('/japan_quotes/docs')
   // faceapi.nets.tinyFaceDetector.loadFromUri(modelsUrl + 'tiny_face_detector_model-weights_manifest.json'),
   // faceapi.nets.faceLandmark68Net.loadFromUri(modelsUrl + 'face_landmark_68_model-weights_manifest.json'),
   // faceapi.nets.faceRecognitionNet.loadFromUri(modelsUrl + 'face_recognition_model-weights_manifest.json'),
