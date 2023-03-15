@@ -17,28 +17,28 @@ var quotes = [
 
 // The faceAPI
 const video = document.getElementById('video');
-console.log("Vid4");
-Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/models')
-]).then(startVideo)
+console.log("Vid5");
+// Promise.all([
+//   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+//   faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+//   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
+//   faceapi.nets.faceExpressionNet.loadFromUri('/models')
+// ]).then(startVideo)
 
 // let modelsUrl = "https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights/";
 // let modelsUrl = "https://raw.github.com/csprw/japan_quotes/tree/master/models"
 // let modelsUrl = "./models"
 
-// Promise.all([
-  // faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-  // faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  // faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  // faceapi.nets.faceExpressionNet.loadFromUri('/models')
+Promise.all([
+  faceapi.nets.tinyFaceDetector.loadFromUri('/docs'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/docs'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('/docs'),
+  faceapi.nets.faceExpressionNet.loadFromUri('/docs')
   // faceapi.nets.tinyFaceDetector.loadFromUri(modelsUrl + 'tiny_face_detector_model-weights_manifest.json'),
   // faceapi.nets.faceLandmark68Net.loadFromUri(modelsUrl + 'face_landmark_68_model-weights_manifest.json'),
   // faceapi.nets.faceRecognitionNet.loadFromUri(modelsUrl + 'face_recognition_model-weights_manifest.json'),
   // faceapi.nets.faceExpressionNet.loadFromUri(modelsUrl + 'ssd_mobilenetv1_model-weights_manifest.json')
-// ]).then(startVideo)
+]).then(startVideo)
 
 function startVideo() {
   navigator.getUserMedia(
