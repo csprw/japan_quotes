@@ -24,6 +24,10 @@ Promise.all([
   faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
   faceapi.nets.faceExpressionNet.loadFromUri('/models')
+  // faceapi.nets.tinyFaceDetector.loadFromUri('./'),
+  // faceapi.nets.faceLandmark68Net.loadFromUri('./'),
+  // faceapi.nets.faceRecognitionNet.loadFromUri('./'),
+  // faceapi.nets.faceExpressionNet.loadFromUri('./')
 ]).then(startVideo)
 
 function startVideo() {
