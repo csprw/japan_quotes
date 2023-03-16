@@ -21,31 +21,65 @@
     body {
       margin: 0;
       padding: 0;
-      width: 100vw;
-      height: 100vh;
+      
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: black;
       /* transform: rotate(-90deg); */
+      /* transform: rotate(-90deg); */
+      width: 100vw;
+      height: 100vh;
+      /* border: 2px solid white; */
+    }
+
+    video {
+      /* position: absolute; */
+      /* transform: rotate(-90deg); */
+
+      /* transform-origin: bottom left; */
+      /* width: 100vw;
+      height: 100vh; */
+      /* margin-top: -100vw; */
+      /* object-fit: cover; */
+      /* z-index: 4; */
+      visibility: visible;
     }
 
     canvas {
       position: absolute;
-      /* border: 1px solid blue; */
+      /* border: 1px solid red; */
+      transform: rotate(-90deg);
       /* height: 1em; */
+      /* transform: rotate(-90deg); */
+      /* width: 100vw;
+      height: 100vh; */
     }
 
-    /* #videoHolder {
+    #videoHolder {
       transform: rotate(-90deg);
-    } */
+      /* border: 1px solid blue; */
+      /* height: 200vw; */
+    }
 
     #front {
-      /* border: 1px solid red; */
-      width: 100vw;
-      height: 100vh;
+      transform: rotate(-90deg);
+      /* border: 1px solid purple; */
+      
       position: absolute;
       z-index: 99;
+
+      /* olde */
+      /* width: 100vw;
+      height: 100vh;  */
+
+      /* new */
+      width: 100vh;
+      height: 100vw; 
+
+      /* transform: rotate(-90deg);
+      width: 100vh;
+      height: 100vw; */
     }
 
     #theForm {
@@ -60,12 +94,16 @@
 
     #textHolder {
       position: absolute;
-      /* border: 2px solid red; */
-      width: 100%;
-      bottom: 0;
+      /* border: 2px solid yellow; */
+      width: 100%; /*NOte: if turned */
+      bottom: 0; /*note: if turned*/
+      /* height: 100%; */
+      /* left: 0 !important; */
+      
     }
 
     #theText {
+
       font-size: 5em;
       /* color: red; */
       /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -73,13 +111,24 @@
       font-weight: 500;
       text-align: center;
       color:rgb(255, 0, 0);
-      /* position: absolute; */
-      /* bottom: 0; */
-      max-width:80vw;
+
+      /* old */
+      /* max-width:80vw;
       margin-left: 10vw;
       margin-bottom: 2vh;
-      /* border: 1px solid blue; */
-      /* word-wrap:break-word; */
+      max-height: 80vh;
+      border: 2px solid orange; */
+
+      /* NEW */
+      /* max-width: 80vh; */
+      width: 80%;
+      padding: 10%;
+      /* right: -20vh; */
+      /* top: 0; */
+      /* margin-right: -20vh; */
+      /* top: 0; */
+      /* border: 2px solid orange;
+      border-right: 5px solid green; */
     }
   </style>
 </head>
@@ -90,7 +139,9 @@
 
 
   <div id="videoHolder">
-    <video id="video" width="1440" height="1120" autoplay muted></video>
+    <!-- <video id="video" width="1440" height="1120" autoplay muted></video> -->
+    <video id="video" width="2160" height="1680" autoplay muted></video>
+    <!-- <video id="video" width="2880" height="2240" autoplay muted></video> -->
   </div>
   
   <div id="front">
