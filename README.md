@@ -1,9 +1,45 @@
-# IMPORTANT: Bug Fixes
+# Zuurstofschuld
 
-## `navigator.getUserMedia`
+## Overview
+This - very quickly made - github shows some quotes as an overlay to webcam footage. It's a quick test for a showcase in Japan. 
 
-`navigator.getUserMedia` is now deprecated and is replaced by `navigator.mediaDevices.getUserMedia`. To fix this bug replace all versions of `navigator.getUserMedia` with `navigator.mediaDevices.getUserMedia`
 
-## Low-end Devices Bug
+### Online host
+The page is hosted online at:
 
-The video eventListener for `play` fires up too early on low-end machines, before the video is fully loaded, which causes errors to pop up from the Face API and terminates the script (tested on Debian [Firefox] and Windows [Chrome, Firefox]). Replaced by `playing` event, which fires up when the media has enough data to start playing.
+``` 
+https://csprw.github.io/japan_quotes/
+```
+### Run offline
+
+Install Homebrew:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Install nodejs 
+
+```
+brew install node
+```
+
+(Or use conda if preferred)
+
+```
+conda install -c conda-forge nodejs
+```
+
+## Setup server
+
+
+```
+npm i npx-server
+```
+
+
+## Start server
+ 
+```
+npx npx-server
+```
